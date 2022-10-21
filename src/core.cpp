@@ -441,7 +441,7 @@ int main(int argc, char const *argv[]) {
 
 
     std::cout << "\nLoading combination container..." << "\n";
-    std::vector<std::string> combsList = {"../saves/comb2c.txt", "../saves/comb5c.txt", "../saves/comb6c.txt"};
+    std::vector<std::string> combsList = {"../saves/comb2c.txt", "../saves/comb5c.txt"};
     for (std::string path:combsList) {                                  // Execute for each path inserted
 
         combFile.clear();                                               // Clearing the stream to avoid conflict
