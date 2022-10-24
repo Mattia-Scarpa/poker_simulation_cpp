@@ -21,6 +21,7 @@
 #include <thread> 
 #include <signal.h>
 #include <math.h>
+#include <assert.h>
 
 // Importing Custom Libraries
 
@@ -68,9 +69,6 @@ std::vector<std::string> GAME_PHASE = {"_blind_", "_flop_"};                // p
 
 
 // Initialize containers to store all the combination
-//nc::NdArray<short> combs2 = nc::zeros<short>(COMBS_2CARD, 2);                                               // 2 cards combination (blind)
-//nc::NdArray<short> combs5 = nc::zeros<short>(COMBS_5CARD, 5);                                               // 5 cards combination (flop)
-
 short combs2[COMBS_2CARD][2] {0};
 short combs5[COMBS_5CARD][5] {0};
 
@@ -94,7 +92,7 @@ std::ifstream combFile;                                             // Initializ
 // Return the index of the first array corresponding to the values of the second vector
 int handBinarySearch(short array[][2], std::vector<short> &value, int low, int high) {  
     // Check constraints on lists to be evaluated
-    //assert(array[0].size() == value.size() && "Array and values must have the same number of columns");
+    assert(value.size() == 2 && "Array and values must have the same number of columns");
 
     int numCols = value.size();        // Iterator index limit: the evaluation is made for all the elements in the row
 
@@ -105,14 +103,14 @@ int handBinarySearch(short array[][2], std::vector<short> &value, int low, int h
 
         bool found = true;
         for (size_t i(0); i < numCols; i++)
-            if (array[mid][i] != value[i]) found = false;            // Control if the two rows are equal
+            if (array[mid][i] != value[i]) found = false;               // Control if the two rows are equal
         
         if(found) return mid;                                           // If row are equal at mid position then return the current index
         else {
             for (int i(0); i<numCols; i++) {
-                if(array[mid][i] > value[i]) {high = mid; break;}    // If value row is smaller then array in mid check in the bot half
+                if(array[mid][i] > value[i]) {high = mid; break;}       // If value row is smaller then array in mid check in the bot half
 
-                if(array[mid][i] < value[i]) {low = mid; break;}     // Otherwise chel in the top half
+                if(array[mid][i] < value[i]) {low = mid; break;}        // Otherwise chel in the top half
             }
         }
     }
@@ -120,7 +118,7 @@ int handBinarySearch(short array[][2], std::vector<short> &value, int low, int h
 }
 int handBinarySearch(short array[][5], std::vector<short> &value, int low, int high) {  
     // Check constraints on lists to be evaluated
-    //assert(array[0].size() == value.size() && "Array and values must have the same number of columns");
+    assert(value.size() == 5 && "Array and values must have the same number of columns");
 
     int numCols = value.size();        // Iterator index limit: the evaluation is made for all the elements in the row
 
@@ -131,14 +129,14 @@ int handBinarySearch(short array[][5], std::vector<short> &value, int low, int h
 
         bool found = true;
         for (size_t i(0); i < numCols; i++)
-            if (array[mid][i] != value[i]) found = false;            // Control if the two rows are equal
+            if (array[mid][i] != value[i]) found = false;               // Control if the two rows are equal
         
         if(found) return mid;                                           // If row are equal at mid position then return the current index
         else {
             for (int i(0); i<numCols; i++) {
-                if(array[mid][i] > value[i]) {high = mid; break;}    // If value row is smaller then array in mid check in the bot half
+                if(array[mid][i] > value[i]) {high = mid; break;}       // If value row is smaller then array in mid check in the bot half
 
-                if(array[mid][i] < value[i]) {low = mid; break;}     // Otherwise chel in the top half
+                if(array[mid][i] < value[i]) {low = mid; break;}        // Otherwise chel in the top half
             }
         }
     }
@@ -334,7 +332,6 @@ void repeatSim(int n) {
     printf("Total Simulation Time: \t\t%2.3f\t[s]\n", (finalTime - loadTime)/1000000000.f);
     printf("Average Single Simulation: \t%2.3f\t[\u03BCs]\n", (finalTime - loadTime)/count/1000.f);
 
-
     writeResult();
     exit(0);
 }
@@ -354,12 +351,6 @@ void handler (int signum) {
     printf("Total Simulation Time: \t\t%2.3f\t[s]\n", (finalTime - loadTime)/1000000000.f);
     printf("Average Single Simulation: \t%2.3f\t[\u03BCs]\n", (finalTime - loadTime)/count/1000.f);
 
-    exit(1);
-    std::cout << "\n Restarting:\n";
-
-    //oddsResultBlind = 0;
-    //std::fill(oddsResultBlind.begin(), oddsResultBlind.end(), 0);                    //  Resetting 2 cards result (blind)
-    //std::fill(oddsResultFlop.begin(), oddsResultFlop.end(), 0);                      //  Resetting 5 cards result (flop)
     exit(1);
 
 }

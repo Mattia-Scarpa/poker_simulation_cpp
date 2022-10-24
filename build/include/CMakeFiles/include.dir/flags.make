@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/mnt/Cache/POKER_WS/poker_simulation_final/include
 
-CXX_FLAGS = 
+CXX_FLAGS = -g
 

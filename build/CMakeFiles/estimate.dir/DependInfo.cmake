@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/Cache/POKER_WS/poker_simulation_final/src/simulate.cpp" "CMakeFiles/simulate.dir/src/simulate.cpp.o" "gcc" "CMakeFiles/simulate.dir/src/simulate.cpp.o.d"
+  "/mnt/Cache/POKER_WS/poker_simulation_final/src/estimate.cpp" "CMakeFiles/estimate.dir/src/estimate.cpp.o" "gcc" "CMakeFiles/estimate.dir/src/estimate.cpp.o.d"
   )
 
 # Targets to which this target links.

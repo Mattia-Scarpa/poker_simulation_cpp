@@ -10,7 +10,7 @@
 					[
 						1
 					],
-					"jsonFile" : "directory-.-f5ebdc15457944623624.json",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.8"
@@ -19,12 +19,13 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						1
+						0,
+						2
 					]
 				},
 				{
 					"build" : "include",
-					"jsonFile" : "directory-include-7ead17b99bffc88b66bb.json",
+					"jsonFile" : "directory-include-Debug-7ead17b99bffc88b66bb.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.8"
@@ -34,11 +35,11 @@
 					"source" : "include",
 					"targetIndexes" : 
 					[
-						0
+						1
 					]
 				}
 			],
-			"name" : "",
+			"name" : "Debug",
 			"projects" : 
 			[
 				{
@@ -51,23 +52,31 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
 			"targets" : 
 			[
 				{
+					"directoryIndex" : 0,
+					"id" : "estimate::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-estimate-Debug-95d4d4951862af84074a.json",
+					"name" : "estimate",
+					"projectIndex" : 0
+				},
+				{
 					"directoryIndex" : 1,
 					"id" : "include::@14b3099d61bfdbeae804",
-					"jsonFile" : "target-include-12d6dd096a13cbd1196c.json",
+					"jsonFile" : "target-include-Debug-06e80327be4365873f06.json",
 					"name" : "include",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "simulate::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-simulate-272df75db6351b26b03d.json",
+					"jsonFile" : "target-simulate-Debug-a9e0ee96c14f3fdba098.json",
 					"name" : "simulate",
 					"projectIndex" : 0
 				}

@@ -1,1 +1,1 @@
-/usr/bin/g++ CMakeFiles/simulate.dir/src/core.cpp.o -o simulate  include/libinclude.a 
+/usr/bin/g++ -g CMakeFiles/simulate.dir/src/simulate.cpp.o -o simulate  include/libinclude.a 

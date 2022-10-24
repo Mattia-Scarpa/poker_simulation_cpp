@@ -130,6 +130,19 @@ simulate/fast:
 .PHONY : simulate/fast
 
 #=============================================================================
+# Target rules for targets named estimate
+
+# Build rule for target.
+estimate: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 estimate
+.PHONY : estimate
+
+# fast build rule for target.
+estimate/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/estimate.dir/build.make CMakeFiles/estimate.dir/build
+.PHONY : estimate/fast
+
+#=============================================================================
 # Target rules for targets named include
 
 # Build rule for target.
@@ -142,29 +155,53 @@ include/fast:
 	$(MAKE) $(MAKESILENT) -f include/CMakeFiles/include.dir/build.make include/CMakeFiles/include.dir/build
 .PHONY : include/fast
 
-src/core.o: src/core.cpp.o
-.PHONY : src/core.o
+src/estimate.o: src/estimate.cpp.o
+.PHONY : src/estimate.o
 
 # target to build an object file
-src/core.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simulate.dir/build.make CMakeFiles/simulate.dir/src/core.cpp.o
-.PHONY : src/core.cpp.o
+src/estimate.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/estimate.dir/build.make CMakeFiles/estimate.dir/src/estimate.cpp.o
+.PHONY : src/estimate.cpp.o
 
-src/core.i: src/core.cpp.i
-.PHONY : src/core.i
+src/estimate.i: src/estimate.cpp.i
+.PHONY : src/estimate.i
 
 # target to preprocess a source file
-src/core.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simulate.dir/build.make CMakeFiles/simulate.dir/src/core.cpp.i
-.PHONY : src/core.cpp.i
+src/estimate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/estimate.dir/build.make CMakeFiles/estimate.dir/src/estimate.cpp.i
+.PHONY : src/estimate.cpp.i
 
-src/core.s: src/core.cpp.s
-.PHONY : src/core.s
+src/estimate.s: src/estimate.cpp.s
+.PHONY : src/estimate.s
 
 # target to generate assembly for a file
-src/core.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simulate.dir/build.make CMakeFiles/simulate.dir/src/core.cpp.s
-.PHONY : src/core.cpp.s
+src/estimate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/estimate.dir/build.make CMakeFiles/estimate.dir/src/estimate.cpp.s
+.PHONY : src/estimate.cpp.s
+
+src/simulate.o: src/simulate.cpp.o
+.PHONY : src/simulate.o
+
+# target to build an object file
+src/simulate.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simulate.dir/build.make CMakeFiles/simulate.dir/src/simulate.cpp.o
+.PHONY : src/simulate.cpp.o
+
+src/simulate.i: src/simulate.cpp.i
+.PHONY : src/simulate.i
+
+# target to preprocess a source file
+src/simulate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simulate.dir/build.make CMakeFiles/simulate.dir/src/simulate.cpp.i
+.PHONY : src/simulate.cpp.i
+
+src/simulate.s: src/simulate.cpp.s
+.PHONY : src/simulate.s
+
+# target to generate assembly for a file
+src/simulate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simulate.dir/build.make CMakeFiles/simulate.dir/src/simulate.cpp.s
+.PHONY : src/simulate.cpp.s
 
 # Help Target
 help:
@@ -174,11 +211,15 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... estimate"
 	@echo "... include"
 	@echo "... simulate"
-	@echo "... src/core.o"
-	@echo "... src/core.i"
-	@echo "... src/core.s"
+	@echo "... src/estimate.o"
+	@echo "... src/estimate.i"
+	@echo "... src/estimate.s"
+	@echo "... src/simulate.o"
+	@echo "... src/simulate.i"
+	@echo "... src/simulate.s"
 .PHONY : help
 
 

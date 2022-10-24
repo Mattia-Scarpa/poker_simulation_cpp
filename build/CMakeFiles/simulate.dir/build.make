@@ -69,28 +69,28 @@ include CMakeFiles/simulate.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/simulate.dir/flags.make
 
-CMakeFiles/simulate.dir/src/core.cpp.o: CMakeFiles/simulate.dir/flags.make
-CMakeFiles/simulate.dir/src/core.cpp.o: ../src/core.cpp
-CMakeFiles/simulate.dir/src/core.cpp.o: CMakeFiles/simulate.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/Cache/POKER_WS/poker_simulation_final/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/simulate.dir/src/core.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simulate.dir/src/core.cpp.o -MF CMakeFiles/simulate.dir/src/core.cpp.o.d -o CMakeFiles/simulate.dir/src/core.cpp.o -c /mnt/Cache/POKER_WS/poker_simulation_final/src/core.cpp
+CMakeFiles/simulate.dir/src/simulate.cpp.o: CMakeFiles/simulate.dir/flags.make
+CMakeFiles/simulate.dir/src/simulate.cpp.o: ../src/simulate.cpp
+CMakeFiles/simulate.dir/src/simulate.cpp.o: CMakeFiles/simulate.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/Cache/POKER_WS/poker_simulation_final/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/simulate.dir/src/simulate.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simulate.dir/src/simulate.cpp.o -MF CMakeFiles/simulate.dir/src/simulate.cpp.o.d -o CMakeFiles/simulate.dir/src/simulate.cpp.o -c /mnt/Cache/POKER_WS/poker_simulation_final/src/simulate.cpp
 
-CMakeFiles/simulate.dir/src/core.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulate.dir/src/core.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/Cache/POKER_WS/poker_simulation_final/src/core.cpp > CMakeFiles/simulate.dir/src/core.cpp.i
+CMakeFiles/simulate.dir/src/simulate.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulate.dir/src/simulate.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/Cache/POKER_WS/poker_simulation_final/src/simulate.cpp > CMakeFiles/simulate.dir/src/simulate.cpp.i
 
-CMakeFiles/simulate.dir/src/core.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulate.dir/src/core.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/Cache/POKER_WS/poker_simulation_final/src/core.cpp -o CMakeFiles/simulate.dir/src/core.cpp.s
+CMakeFiles/simulate.dir/src/simulate.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulate.dir/src/simulate.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/Cache/POKER_WS/poker_simulation_final/src/simulate.cpp -o CMakeFiles/simulate.dir/src/simulate.cpp.s
 
 # Object files for target simulate
 simulate_OBJECTS = \
-"CMakeFiles/simulate.dir/src/core.cpp.o"
+"CMakeFiles/simulate.dir/src/simulate.cpp.o"
 
 # External object files for target simulate
 simulate_EXTERNAL_OBJECTS =
 
-simulate: CMakeFiles/simulate.dir/src/core.cpp.o
+simulate: CMakeFiles/simulate.dir/src/simulate.cpp.o
 simulate: CMakeFiles/simulate.dir/build.make
 simulate: include/libinclude.a
 simulate: CMakeFiles/simulate.dir/link.txt
