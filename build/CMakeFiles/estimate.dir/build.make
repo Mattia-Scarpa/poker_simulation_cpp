@@ -73,15 +73,15 @@ CMakeFiles/estimate.dir/src/estimate.cpp.o: CMakeFiles/estimate.dir/flags.make
 CMakeFiles/estimate.dir/src/estimate.cpp.o: ../src/estimate.cpp
 CMakeFiles/estimate.dir/src/estimate.cpp.o: CMakeFiles/estimate.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/Cache/POKER_WS/poker_simulation_final/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/estimate.dir/src/estimate.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/estimate.dir/src/estimate.cpp.o -MF CMakeFiles/estimate.dir/src/estimate.cpp.o.d -o CMakeFiles/estimate.dir/src/estimate.cpp.o -c /mnt/Cache/POKER_WS/poker_simulation_final/src/estimate.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/estimate.dir/src/estimate.cpp.o -MF CMakeFiles/estimate.dir/src/estimate.cpp.o.d -o CMakeFiles/estimate.dir/src/estimate.cpp.o -c /mnt/Cache/POKER_WS/poker_simulation_final/src/estimate.cpp
 
 CMakeFiles/estimate.dir/src/estimate.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/estimate.dir/src/estimate.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/Cache/POKER_WS/poker_simulation_final/src/estimate.cpp > CMakeFiles/estimate.dir/src/estimate.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/Cache/POKER_WS/poker_simulation_final/src/estimate.cpp > CMakeFiles/estimate.dir/src/estimate.cpp.i
 
 CMakeFiles/estimate.dir/src/estimate.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/estimate.dir/src/estimate.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/Cache/POKER_WS/poker_simulation_final/src/estimate.cpp -o CMakeFiles/estimate.dir/src/estimate.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/Cache/POKER_WS/poker_simulation_final/src/estimate.cpp -o CMakeFiles/estimate.dir/src/estimate.cpp.s
 
 # Object files for target estimate
 estimate_OBJECTS = \

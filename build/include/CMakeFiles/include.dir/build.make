@@ -73,15 +73,15 @@ include/CMakeFiles/include.dir/poker.cpp.o: include/CMakeFiles/include.dir/flags
 include/CMakeFiles/include.dir/poker.cpp.o: ../include/poker.cpp
 include/CMakeFiles/include.dir/poker.cpp.o: include/CMakeFiles/include.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/Cache/POKER_WS/poker_simulation_final/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object include/CMakeFiles/include.dir/poker.cpp.o"
-	cd /mnt/Cache/POKER_WS/poker_simulation_final/build/include && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT include/CMakeFiles/include.dir/poker.cpp.o -MF CMakeFiles/include.dir/poker.cpp.o.d -o CMakeFiles/include.dir/poker.cpp.o -c /mnt/Cache/POKER_WS/poker_simulation_final/include/poker.cpp
+	cd /mnt/Cache/POKER_WS/poker_simulation_final/build/include && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT include/CMakeFiles/include.dir/poker.cpp.o -MF CMakeFiles/include.dir/poker.cpp.o.d -o CMakeFiles/include.dir/poker.cpp.o -c /mnt/Cache/POKER_WS/poker_simulation_final/include/poker.cpp
 
 include/CMakeFiles/include.dir/poker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/include.dir/poker.cpp.i"
-	cd /mnt/Cache/POKER_WS/poker_simulation_final/build/include && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/Cache/POKER_WS/poker_simulation_final/include/poker.cpp > CMakeFiles/include.dir/poker.cpp.i
+	cd /mnt/Cache/POKER_WS/poker_simulation_final/build/include && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/Cache/POKER_WS/poker_simulation_final/include/poker.cpp > CMakeFiles/include.dir/poker.cpp.i
 
 include/CMakeFiles/include.dir/poker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/include.dir/poker.cpp.s"
-	cd /mnt/Cache/POKER_WS/poker_simulation_final/build/include && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/Cache/POKER_WS/poker_simulation_final/include/poker.cpp -o CMakeFiles/include.dir/poker.cpp.s
+	cd /mnt/Cache/POKER_WS/poker_simulation_final/build/include && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/Cache/POKER_WS/poker_simulation_final/include/poker.cpp -o CMakeFiles/include.dir/poker.cpp.s
 
 # Object files for target include
 include_OBJECTS = \

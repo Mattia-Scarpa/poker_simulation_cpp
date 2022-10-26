@@ -73,15 +73,15 @@ CMakeFiles/simulate.dir/src/simulate.cpp.o: CMakeFiles/simulate.dir/flags.make
 CMakeFiles/simulate.dir/src/simulate.cpp.o: ../src/simulate.cpp
 CMakeFiles/simulate.dir/src/simulate.cpp.o: CMakeFiles/simulate.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/Cache/POKER_WS/poker_simulation_final/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/simulate.dir/src/simulate.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simulate.dir/src/simulate.cpp.o -MF CMakeFiles/simulate.dir/src/simulate.cpp.o.d -o CMakeFiles/simulate.dir/src/simulate.cpp.o -c /mnt/Cache/POKER_WS/poker_simulation_final/src/simulate.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/simulate.dir/src/simulate.cpp.o -MF CMakeFiles/simulate.dir/src/simulate.cpp.o.d -o CMakeFiles/simulate.dir/src/simulate.cpp.o -c /mnt/Cache/POKER_WS/poker_simulation_final/src/simulate.cpp
 
 CMakeFiles/simulate.dir/src/simulate.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulate.dir/src/simulate.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/Cache/POKER_WS/poker_simulation_final/src/simulate.cpp > CMakeFiles/simulate.dir/src/simulate.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/Cache/POKER_WS/poker_simulation_final/src/simulate.cpp > CMakeFiles/simulate.dir/src/simulate.cpp.i
 
 CMakeFiles/simulate.dir/src/simulate.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulate.dir/src/simulate.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/Cache/POKER_WS/poker_simulation_final/src/simulate.cpp -o CMakeFiles/simulate.dir/src/simulate.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/Cache/POKER_WS/poker_simulation_final/src/simulate.cpp -o CMakeFiles/simulate.dir/src/simulate.cpp.s
 
 # Object files for target simulate
 simulate_OBJECTS = \

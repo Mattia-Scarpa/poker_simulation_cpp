@@ -1,1 +1,1 @@
-/usr/bin/g++ -g CMakeFiles/estimate.dir/src/estimate.cpp.o -o estimate  include/libinclude.a 
+/usr/bin/c++ CMakeFiles/estimate.dir/src/estimate.cpp.o -o estimate  include/libinclude.a 
