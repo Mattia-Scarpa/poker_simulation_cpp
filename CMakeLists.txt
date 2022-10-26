@@ -14,7 +14,7 @@ add_subdirectory(include)
 find_package(Threads)
 
 # Adding properties
-set_target_properties(include PROPERTIES LINKER_LANGUAGE CXX)
+#set_target_properties(include PROPERTIES LINKER_LANGUAGE CXX)
 
 
 target_link_libraries(simulate

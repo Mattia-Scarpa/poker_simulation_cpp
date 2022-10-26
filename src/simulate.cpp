@@ -314,7 +314,7 @@ void repeatSim(int n) {
             // spawn and run #nThreads simulation
             spawnThreads(nThreads);
             
-            double p = (((float)k/(n-1.f))*100);
+            double p = (((float)k/(n-1.f))*100.f);
             std::string progress = "Progress: " + std::to_string(p) + "%\t -> \tk=" + std::to_string(k) + "/"+ std::to_string(static_cast<int>(GAMES_NUMBER));
             std::cout << "\r" << progress;
         }

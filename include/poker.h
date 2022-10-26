@@ -59,7 +59,7 @@ namespace poker {   // main functions group
         int OverallValue = 0;   
     };
 
-    inline std::vector<card> deck;         // Hidden deck, possible to access only with dedicated function
+    std::vector<card> deck;         // Hidden deck, possible to access only with dedicated function
 
     inline bool operator== (const card &c1, const card &c2) {
         return c1.seed == c2.seed && c1.value == c2.value;
