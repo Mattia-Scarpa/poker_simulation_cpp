@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblib.a CMakeFiles/lib.dir/card.cpp.o CMakeFiles/lib.dir/hand.cpp.o CMakeFiles/lib.dir/deck.cpp.o CMakeFiles/lib.dir/combinations.cpp.o CMakeFiles/lib.dir/board.cpp.o
+/usr/bin/ranlib liblib.a
