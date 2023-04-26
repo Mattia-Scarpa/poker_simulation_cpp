@@ -63,6 +63,7 @@ namespace poker
         return c;        
     }
 
+    // COMPILATION ERROR... BUG UNKNOWN
     hand deck::draw_hand() 
     {
         return hand(draw(), draw());

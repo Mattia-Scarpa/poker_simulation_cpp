@@ -193,4 +193,6 @@ CMakeFiles/simulate.dir/src/main_game.cpp.o: \
  /usr/include/c++/11/bits/unordered_map.h \
  /usr/include/c++/11/bits/erase_if.h \
  /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/src/../include/deck.hpp \
- /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/src/../include/combinations.hpp
+ /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/src/../include/combinations.hpp \
+ /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/src/../include/player.hpp \
+ /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/src/../include/board.hpp

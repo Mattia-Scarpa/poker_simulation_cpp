@@ -253,6 +253,12 @@ namespace poker
         bool rank_hand();
 
         /**
+         * @brief return if a valid board i set
+         *
+         */
+        inline bool board_valid() {return Board_valid;}
+
+        /**
          * @brief Remove the board reference pointing to nullptr
          * 
          */
@@ -335,7 +341,7 @@ namespace poker
          */
         friend std::ostream& operator<<(std::ostream& os, const hand& h) 
         {   
-            os << "\n RANK\t| HAND CARDS\t| CURRENT BOARD \t"
+            os << "RANK\t| HAND CARDS\t| CURRENT BOARD \t"
                << "\n-----------------------------------------------\n";
             
             os << " " << h.Rank.value << "\t|";

@@ -1,6 +1,5 @@
 
 #pragma once
-#include <vector>
 
 constexpr int COMBS_2CARD{1326};                // Total of 2 cards combination
 constexpr int COMBS_5CARD{2598960};             // Total of 5 cards combination
@@ -118,7 +117,7 @@ public:
             else
                 oddsResultFlop[hands_index[winners_idx]][0]++;
 
-            std::cout << "Writing at: " << hands_index[winners_idx] << "\n";     
+            //std::cout << "Writing at: " << hands_index[winners_idx] << "\n";     
             }   
     }
 

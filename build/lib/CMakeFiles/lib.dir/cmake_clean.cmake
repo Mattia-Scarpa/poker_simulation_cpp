@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/lib.dir/deck.cpp.o.d"
   "CMakeFiles/lib.dir/hand.cpp.o"
   "CMakeFiles/lib.dir/hand.cpp.o.d"
+  "CMakeFiles/lib.dir/player.cpp.o"
+  "CMakeFiles/lib.dir/player.cpp.o.d"
   "liblib.a"
   "liblib.pdb"
 )

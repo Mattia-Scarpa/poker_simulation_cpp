@@ -66,11 +66,6 @@ namespace poker
             std::cerr << "Flop insertion failed, you may want to use 'clear_board' function before\n";
             return false;
         }
-        if (board->size() < FLOP || board->size() > RIVER)
-        {
-            std::cerr << "Invalid board size, it must be 3,4 or 5\n";
-            return false;
-        }
         Board = board;
         Board_valid = true;
         return true;
@@ -378,6 +373,11 @@ namespace poker
         if (!Board_valid)
         {
             std::cerr << "No valid board is provided, have you used the function 'set_board'?\n";
+            return false;
+        }
+        if (Board->size() < FLOP || Board->size() > RIVER)
+        {
+            std::cerr << "Invalid board size, it must be 3,4 or 5\n";
             return false;
         }
         

@@ -178,6 +178,10 @@ lib/CMakeFiles/lib.dir/board.cpp.o: \
  /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/../include/combinations.hpp \
  /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/../include/card.hpp \
  /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/../include/deck.hpp \
- /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/../include/hand.hpp \
+ /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/../include/../include/hand.hpp \
  /usr/include/c++/11/iterator /usr/include/c++/11/bits/stream_iterator.h \
+ /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/../include/player.hpp \
+ /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
+ /usr/include/c++/11/limits /usr/include/c++/11/ctime \
+ /usr/include/c++/11/bits/parse_numbers.h \
  /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/../include/board.hpp

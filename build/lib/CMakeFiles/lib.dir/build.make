@@ -69,33 +69,33 @@ include lib/CMakeFiles/lib.dir/progress.make
 # Include the compile flags for this target's objects.
 include lib/CMakeFiles/lib.dir/flags.make
 
-lib/CMakeFiles/lib.dir/card.cpp.o: lib/CMakeFiles/lib.dir/flags.make
-lib/CMakeFiles/lib.dir/card.cpp.o: ../lib/card.cpp
-lib/CMakeFiles/lib.dir/card.cpp.o: lib/CMakeFiles/lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/CMakeFiles/lib.dir/card.cpp.o"
-	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/lib.dir/card.cpp.o -MF CMakeFiles/lib.dir/card.cpp.o.d -o CMakeFiles/lib.dir/card.cpp.o -c /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/card.cpp
+lib/CMakeFiles/lib.dir/player.cpp.o: lib/CMakeFiles/lib.dir/flags.make
+lib/CMakeFiles/lib.dir/player.cpp.o: ../lib/player.cpp
+lib/CMakeFiles/lib.dir/player.cpp.o: lib/CMakeFiles/lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object lib/CMakeFiles/lib.dir/player.cpp.o"
+	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/lib.dir/player.cpp.o -MF CMakeFiles/lib.dir/player.cpp.o.d -o CMakeFiles/lib.dir/player.cpp.o -c /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/player.cpp
 
-lib/CMakeFiles/lib.dir/card.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lib.dir/card.cpp.i"
-	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/card.cpp > CMakeFiles/lib.dir/card.cpp.i
+lib/CMakeFiles/lib.dir/player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lib.dir/player.cpp.i"
+	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/player.cpp > CMakeFiles/lib.dir/player.cpp.i
 
-lib/CMakeFiles/lib.dir/card.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lib.dir/card.cpp.s"
-	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/card.cpp -o CMakeFiles/lib.dir/card.cpp.s
+lib/CMakeFiles/lib.dir/player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lib.dir/player.cpp.s"
+	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/player.cpp -o CMakeFiles/lib.dir/player.cpp.s
 
-lib/CMakeFiles/lib.dir/hand.cpp.o: lib/CMakeFiles/lib.dir/flags.make
-lib/CMakeFiles/lib.dir/hand.cpp.o: ../lib/hand.cpp
-lib/CMakeFiles/lib.dir/hand.cpp.o: lib/CMakeFiles/lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/CMakeFiles/lib.dir/hand.cpp.o"
-	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/lib.dir/hand.cpp.o -MF CMakeFiles/lib.dir/hand.cpp.o.d -o CMakeFiles/lib.dir/hand.cpp.o -c /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/hand.cpp
+lib/CMakeFiles/lib.dir/board.cpp.o: lib/CMakeFiles/lib.dir/flags.make
+lib/CMakeFiles/lib.dir/board.cpp.o: ../lib/board.cpp
+lib/CMakeFiles/lib.dir/board.cpp.o: lib/CMakeFiles/lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/CMakeFiles/lib.dir/board.cpp.o"
+	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/lib.dir/board.cpp.o -MF CMakeFiles/lib.dir/board.cpp.o.d -o CMakeFiles/lib.dir/board.cpp.o -c /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/board.cpp
 
-lib/CMakeFiles/lib.dir/hand.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lib.dir/hand.cpp.i"
-	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/hand.cpp > CMakeFiles/lib.dir/hand.cpp.i
+lib/CMakeFiles/lib.dir/board.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lib.dir/board.cpp.i"
+	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/board.cpp > CMakeFiles/lib.dir/board.cpp.i
 
-lib/CMakeFiles/lib.dir/hand.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lib.dir/hand.cpp.s"
-	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/hand.cpp -o CMakeFiles/lib.dir/hand.cpp.s
+lib/CMakeFiles/lib.dir/board.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lib.dir/board.cpp.s"
+	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/board.cpp -o CMakeFiles/lib.dir/board.cpp.s
 
 lib/CMakeFiles/lib.dir/deck.cpp.o: lib/CMakeFiles/lib.dir/flags.make
 lib/CMakeFiles/lib.dir/deck.cpp.o: ../lib/deck.cpp
@@ -111,10 +111,24 @@ lib/CMakeFiles/lib.dir/deck.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lib.dir/deck.cpp.s"
 	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/deck.cpp -o CMakeFiles/lib.dir/deck.cpp.s
 
+lib/CMakeFiles/lib.dir/hand.cpp.o: lib/CMakeFiles/lib.dir/flags.make
+lib/CMakeFiles/lib.dir/hand.cpp.o: ../lib/hand.cpp
+lib/CMakeFiles/lib.dir/hand.cpp.o: lib/CMakeFiles/lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object lib/CMakeFiles/lib.dir/hand.cpp.o"
+	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/lib.dir/hand.cpp.o -MF CMakeFiles/lib.dir/hand.cpp.o.d -o CMakeFiles/lib.dir/hand.cpp.o -c /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/hand.cpp
+
+lib/CMakeFiles/lib.dir/hand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lib.dir/hand.cpp.i"
+	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/hand.cpp > CMakeFiles/lib.dir/hand.cpp.i
+
+lib/CMakeFiles/lib.dir/hand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lib.dir/hand.cpp.s"
+	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/hand.cpp -o CMakeFiles/lib.dir/hand.cpp.s
+
 lib/CMakeFiles/lib.dir/combinations.cpp.o: lib/CMakeFiles/lib.dir/flags.make
 lib/CMakeFiles/lib.dir/combinations.cpp.o: ../lib/combinations.cpp
 lib/CMakeFiles/lib.dir/combinations.cpp.o: lib/CMakeFiles/lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object lib/CMakeFiles/lib.dir/combinations.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object lib/CMakeFiles/lib.dir/combinations.cpp.o"
 	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/lib.dir/combinations.cpp.o -MF CMakeFiles/lib.dir/combinations.cpp.o.d -o CMakeFiles/lib.dir/combinations.cpp.o -c /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/combinations.cpp
 
 lib/CMakeFiles/lib.dir/combinations.cpp.i: cmake_force
@@ -125,39 +139,41 @@ lib/CMakeFiles/lib.dir/combinations.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lib.dir/combinations.cpp.s"
 	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/combinations.cpp -o CMakeFiles/lib.dir/combinations.cpp.s
 
-lib/CMakeFiles/lib.dir/board.cpp.o: lib/CMakeFiles/lib.dir/flags.make
-lib/CMakeFiles/lib.dir/board.cpp.o: ../lib/board.cpp
-lib/CMakeFiles/lib.dir/board.cpp.o: lib/CMakeFiles/lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object lib/CMakeFiles/lib.dir/board.cpp.o"
-	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/lib.dir/board.cpp.o -MF CMakeFiles/lib.dir/board.cpp.o.d -o CMakeFiles/lib.dir/board.cpp.o -c /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/board.cpp
+lib/CMakeFiles/lib.dir/card.cpp.o: lib/CMakeFiles/lib.dir/flags.make
+lib/CMakeFiles/lib.dir/card.cpp.o: ../lib/card.cpp
+lib/CMakeFiles/lib.dir/card.cpp.o: lib/CMakeFiles/lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object lib/CMakeFiles/lib.dir/card.cpp.o"
+	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/lib.dir/card.cpp.o -MF CMakeFiles/lib.dir/card.cpp.o.d -o CMakeFiles/lib.dir/card.cpp.o -c /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/card.cpp
 
-lib/CMakeFiles/lib.dir/board.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lib.dir/board.cpp.i"
-	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/board.cpp > CMakeFiles/lib.dir/board.cpp.i
+lib/CMakeFiles/lib.dir/card.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lib.dir/card.cpp.i"
+	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/card.cpp > CMakeFiles/lib.dir/card.cpp.i
 
-lib/CMakeFiles/lib.dir/board.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lib.dir/board.cpp.s"
-	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/board.cpp -o CMakeFiles/lib.dir/board.cpp.s
+lib/CMakeFiles/lib.dir/card.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lib.dir/card.cpp.s"
+	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/card.cpp -o CMakeFiles/lib.dir/card.cpp.s
 
 # Object files for target lib
 lib_OBJECTS = \
-"CMakeFiles/lib.dir/card.cpp.o" \
-"CMakeFiles/lib.dir/hand.cpp.o" \
+"CMakeFiles/lib.dir/player.cpp.o" \
+"CMakeFiles/lib.dir/board.cpp.o" \
 "CMakeFiles/lib.dir/deck.cpp.o" \
+"CMakeFiles/lib.dir/hand.cpp.o" \
 "CMakeFiles/lib.dir/combinations.cpp.o" \
-"CMakeFiles/lib.dir/board.cpp.o"
+"CMakeFiles/lib.dir/card.cpp.o"
 
 # External object files for target lib
 lib_EXTERNAL_OBJECTS =
 
-lib/liblib.a: lib/CMakeFiles/lib.dir/card.cpp.o
-lib/liblib.a: lib/CMakeFiles/lib.dir/hand.cpp.o
-lib/liblib.a: lib/CMakeFiles/lib.dir/deck.cpp.o
-lib/liblib.a: lib/CMakeFiles/lib.dir/combinations.cpp.o
+lib/liblib.a: lib/CMakeFiles/lib.dir/player.cpp.o
 lib/liblib.a: lib/CMakeFiles/lib.dir/board.cpp.o
+lib/liblib.a: lib/CMakeFiles/lib.dir/deck.cpp.o
+lib/liblib.a: lib/CMakeFiles/lib.dir/hand.cpp.o
+lib/liblib.a: lib/CMakeFiles/lib.dir/combinations.cpp.o
+lib/liblib.a: lib/CMakeFiles/lib.dir/card.cpp.o
 lib/liblib.a: lib/CMakeFiles/lib.dir/build.make
 lib/liblib.a: lib/CMakeFiles/lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library liblib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library liblib.a"
 	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && $(CMAKE_COMMAND) -P CMakeFiles/lib.dir/cmake_clean_target.cmake
 	cd /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lib.dir/link.txt --verbose=$(VERBOSE)
 

@@ -1,5 +1,5 @@
 #pragma once
-
+#include "../include/hand.hpp"
 
 namespace poker
 {
@@ -73,6 +73,8 @@ namespace poker
          * @return hand object
          */
         hand draw_hand();
+        //poker::hand draw_hand();
+        //error: ‘hand’ does not name a type
 
         /**
          * @brief restore the original 52 cards deck 

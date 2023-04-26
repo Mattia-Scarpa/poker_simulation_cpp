@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/combinations.cpp" "lib/CMakeFiles/lib.dir/combinations.cpp.o" "gcc" "lib/CMakeFiles/lib.dir/combinations.cpp.o.d"
   "/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/deck.cpp" "lib/CMakeFiles/lib.dir/deck.cpp.o" "gcc" "lib/CMakeFiles/lib.dir/deck.cpp.o.d"
   "/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/hand.cpp" "lib/CMakeFiles/lib.dir/hand.cpp.o" "gcc" "lib/CMakeFiles/lib.dir/hand.cpp.o.d"
+  "/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/player.cpp" "lib/CMakeFiles/lib.dir/player.cpp.o" "gcc" "lib/CMakeFiles/lib.dir/player.cpp.o.d"
   )
 
 # Targets to which this target links.

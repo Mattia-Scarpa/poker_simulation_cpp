@@ -6,6 +6,7 @@
 #include <sstream>
 #include <fstream>
 #include <algorithm>
+#include <vector>
 
 #include "../include/card.hpp"
 #include "../include/combinations.hpp"
@@ -104,7 +105,7 @@ int combinations::find_combinations(const std::vector<short>& target)
         break;
     
     default:
-        std::cerr << "No matching size provided, ensure your vectore to be of 2 or 5 elements!\n";
+        std::cerr << "No matching size provided, ensure your vector to be of 2 or 5 elements!\n";
         return -1;
     }
 }

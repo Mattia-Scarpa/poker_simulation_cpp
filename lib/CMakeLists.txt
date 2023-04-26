@@ -1,6 +1,6 @@
 #----------------------------------------------------------------------
 
-SET(INCLUDE_LIB_SRC card.cpp hand.cpp deck.cpp combinations.cpp board.cpp) #
+SET(INCLUDE_LIB_SRC player.cpp board.cpp deck.cpp hand.cpp combinations.cpp card.cpp) #board.cpp
 
 add_library(lib ${INCLUDE_LIB_SRC})
 
