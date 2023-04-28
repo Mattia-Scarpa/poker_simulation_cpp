@@ -14,7 +14,9 @@
 
 namespace poker
 {
-    board::board(int num_player, bool save_result) : NUM_PLAYER{num_player}, COMBS(num_player), flag_save{save_result} {}
+    board::board(int num_player, bool save_result) : NUM_PLAYER{num_player}, 
+                                                     COMBS(num_player), 
+                                                     flag_save{save_result} {}
 
     board::~board() {}
 
@@ -26,9 +28,10 @@ namespace poker
         // reset phase turn and init a new deck
         this->PHASE = 0;
         this->DECK.restore();
-        // reset pot
+        // reset pot parameters
         this->TOTAL_POT = 0;
         this->CURRENT_POT = 0;
+        this->rounding_bet = 0;
         // initialize SB player position
         srand(std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::system_clock::now().time_since_epoch()).count());
         this->position_offset = rand()%this->NUM_PLAYER;
@@ -90,13 +93,69 @@ namespace poker
         return true;
     }
 
+    int board::select_action(int player_index)
+    {
+        if (!this->PLAYERS_HAND[player_index].player_active())
+        {
+            std::cerr << "\nPlayer " << this->PLAYERS_HAND[player_index].ID << ": is not active!\n";
+            return NO_ACTION;
+        }
+        int action, b;
+        bool act = true;
+        while (act)
+        {
+            try
+            {   
+                act = false;
+                std::cout << "\nPlayer " << this->PLAYERS_HAND[player_index].ID << ": chose your action...\n";
+                std::cin >> action;
+                switch (action)
+                {
+                    case CHECK:                    
+                        this->PLAYERS_HAND[player_index].check();
+                        return CHECK;
+                    case CALL:
+                        this->PLAYERS_HAND[player_index].call();
+                        return CALL;
+                    case BET:
+                        std::cout << "Amount to bet: ";
+                        std::cin >> b;
+                        this->PLAYERS_HAND[player_index].bet(b);
+                        return BET;
+                    case RAISE:
+                        std::cout << "Amount to raise: ";
+                        std::cin >> b;
+                        this->PLAYERS_HAND[player_index].raise(b);
+                        return RAISE;
+                    case FOLD:
+                        this->PLAYERS_HAND[player_index].fold();
+                        return FOLD;
+                    case ALLIN:
+                        this->PLAYERS_HAND[player_index].allin();
+                        return ALLIN;
+                    case PRINT:
+                        std::cout << *this;
+                        return NO_ACTION;
+                    default:
+                        throw std::runtime_error("\n\tERROR: illegal action detected!\n");
+                        break;
+                }
+            }
+            catch(...)
+            {
+                std::cerr << "\n\tERROR: ILLEGAL ACTION PROVIDED" << '\n';
+                act = true;
+            }
+        }
+        return NO_ACTION;
+    }
+
     bool board::play_turn()
     {
         this->TOTAL_POT = 0;
         this->CURRENT_POT = 0;
         
         this->init();
-    std::cout << *this << "\n";
         std::cout << "-------------- BLIND --------------\n";
 
         // ensuring valid player position
@@ -133,22 +192,18 @@ namespace poker
                     player_index = (player_index+1)%this->NUM_PLAYER;
                 }
             }
-            std::cout << "COUNTER: " << counter << "\n";
         }
         // after all player has played their turn update board parameters
         this->TOTAL_POT += this->CURRENT_POT;
         this->CURRENT_POT = 0;          // reset phase pot before drwing new board cards
         this->rounding_bet = 0;         // reset rounding bet for a new phase
-
-    std::cout << *this << "\n";
-
+        // resetting player current hand
         for (auto &player:PLAYERS_HAND)
             player.reset_current_bet();
 
         std::cout << "--- DRAWING FLOP ---\n";        
         this->draw_board();    
 
-    std::cout << *this << "\n";
         // reset counter for new phase
         counter = this->NUM_PLAYER;
 
@@ -178,12 +233,129 @@ namespace poker
                 }
             }
         }
+        // after all player has played their turn update board parameters
+        this->TOTAL_POT += this->CURRENT_POT;
+        this->CURRENT_POT = 0;          // reset phase pot before drwing new board cards
+        this->rounding_bet = 0;         // reset rounding bet for a new phase
+        // resetting player current hand
+        for (auto &player:PLAYERS_HAND)
+            player.reset_current_bet();
 
+        std::cout << "--- DRAWING TURN ---\n";        
+        this->draw_board();    
+
+        // reset counter for new phase
+        counter = this->NUM_PLAYER;
+
+        // iterate until all players reach the rounding bet
+        while (counter > 0)
+        {
+            // if the player is not active (after a fold) is not required to take any action
+            if (!this->PLAYERS_HAND[player_index].player_active())
+            {
+                counter--;
+                player_index = (player_index+1)%this->NUM_PLAYER;
+            }
+            else
+            {   
+                // take action
+                int action = this->select_action(player_index);
+                // evaluate if rounding bet is increased
+                if (action == BET || action == RAISE)
+                {
+                    counter = this->NUM_PLAYER-1;
+                    player_index = (player_index+1)%this->NUM_PLAYER;
+                }
+                else if (action != NO_ACTION)
+                {
+                    counter--;
+                    player_index = (player_index+1)%this->NUM_PLAYER;
+                }
+            }
+        }
+        // after all player has played their turn update board parameters
+        this->TOTAL_POT += this->CURRENT_POT;
+        this->CURRENT_POT = 0;          // reset phase pot before drwing new board cards
+        this->rounding_bet = 0;         // reset rounding bet for a new phase
+        // resetting player current hand
+        for (auto &player:PLAYERS_HAND)
+            player.reset_current_bet();
+
+        std::cout << "--- DRAWING RIVER ---\n";        
+        this->draw_board();    
+
+        // reset counter for new phase
+        counter = this->NUM_PLAYER;
+
+        // iterate until all players reach the rounding bet
+        while (counter > 0)
+        {
+            // if the player is not active (after a fold) is not required to take any action
+            if (!this->PLAYERS_HAND[player_index].player_active())
+            {
+                counter--;
+                player_index = (player_index+1)%this->NUM_PLAYER;
+            }
+            else
+            {   
+                // take action
+                int action = this->select_action(player_index);
+                // evaluate if rounding bet is increased
+                if (action == BET || action == RAISE)
+                {
+                    counter = this->NUM_PLAYER-1;
+                    player_index = (player_index+1)%this->NUM_PLAYER;
+                }
+                else if (action != NO_ACTION)
+                {
+                    counter--;
+                    player_index = (player_index+1)%this->NUM_PLAYER;
+                }
+            }
+        }
+        // after all player has played their turn update board parameters
+        this->TOTAL_POT += this->CURRENT_POT;
+        this->CURRENT_POT = 0;          // reset phase pot before drwing new board cards
+        this->rounding_bet = 0;         // reset rounding bet for a new phase
+        // resetting player current hand
+        for (auto &player:PLAYERS_HAND)
+            player.reset_current_bet();
+
+        std::cout << "---- HAND EVALUATION ----\n";
+        for (auto &player:this->PLAYERS_HAND)
+            player.rank_hand();
+
+        std::vector<player*> winners = this->get_winner();
+    
+        std::cout << "A total of " << winners.size() << " winners found!\n";
+
+        for (auto player:winners)
+            player->pay_win(this->TOTAL_POT/winners.size());
 
         
-
+        std::cout << *this;
 
         return true;
     }
+
+
+    std::vector<player*> board::get_winner() 
+    {
+        std::vector<player*> winners;               // initialize winners list
+        int max_Rank = 0;                           // initialize max rank backup
+
+        for (auto &player:this->PLAYERS_HAND)
+        {
+            if (player.get_rank().OverallValue > max_Rank)              // If an highest values is found
+            {
+                winners.clear();                                        // Clear the winners vector
+                winners.push_back(&player);                             // Add the winner position
+                max_Rank = player.get_rank().OverallValue;              // Update the max value for the next control
+            } else if (player.get_rank().OverallValue > max_Rank)       // If the current hand value is the same of the current max value
+                winners.push_back(&player);                             // Adding the current position to the winners list
+        }
+        return winners;
+    }
+
 } // namespace poker
 

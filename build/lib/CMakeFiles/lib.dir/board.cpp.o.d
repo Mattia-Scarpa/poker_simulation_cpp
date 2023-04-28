@@ -1,5 +1,5 @@
 lib/CMakeFiles/lib.dir/board.cpp.o: \
- /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/board.cpp \
+ /mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/board.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -175,13 +175,13 @@ lib/CMakeFiles/lib.dir/board.cpp.o: \
  /usr/include/c++/11/bits/unordered_map.h \
  /usr/include/c++/11/bits/erase_if.h \
  /usr/include/c++/11/pstl/execution_defs.h \
- /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/../include/combinations.hpp \
- /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/../include/card.hpp \
- /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/../include/deck.hpp \
- /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/../include/../include/hand.hpp \
+ /mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/../include/combinations.hpp \
+ /mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/../include/card.hpp \
+ /mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/../include/deck.hpp \
+ /mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/../include/../include/hand.hpp \
  /usr/include/c++/11/iterator /usr/include/c++/11/bits/stream_iterator.h \
- /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/../include/player.hpp \
+ /mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/../include/player.hpp \
  /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
  /usr/include/c++/11/limits /usr/include/c++/11/ctime \
  /usr/include/c++/11/bits/parse_numbers.h \
- /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/../include/board.hpp
+ /mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/../include/board.hpp

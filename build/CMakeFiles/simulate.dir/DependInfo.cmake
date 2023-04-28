@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/src/main_game.cpp" "CMakeFiles/simulate.dir/src/main_game.cpp.o" "gcc" "CMakeFiles/simulate.dir/src/main_game.cpp.o.d"
+  "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/src/main_game.cpp" "CMakeFiles/simulate.dir/src/main_game.cpp.o" "gcc" "CMakeFiles/simulate.dir/src/main_game.cpp.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build/lib/CMakeFiles/lib.dir/DependInfo.cmake"
+  "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/build/lib/CMakeFiles/lib.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

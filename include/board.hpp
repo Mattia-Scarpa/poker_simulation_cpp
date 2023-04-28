@@ -88,66 +88,13 @@ namespace poker
          */
         bool draw_board();
 
-
-        int select_action(int player_index)
-        {
-            if (!this->PLAYERS_HAND[player_index].player_active())
-            {
-                std::cerr << "Player " << PLAYERS_HAND[player_index].ID << ": is not active!\n";
-                return NO_ACTION;
-            }
-
-            int action, b;
-
-            bool act = true;
-            while (act)
-            {
-                try
-                {   
-                    act = false;
-                    std::cout << "Player " << PLAYERS_HAND[player_index].ID << ": chose your action...\n";
-                    std::cin >> action;
-                    switch (action)
-                    {
-                        case CHECK:                    
-                            this->PLAYERS_HAND[player_index].check();
-                            return CHECK;
-                        case CALL:
-                            this->PLAYERS_HAND[player_index].call();
-                            return CALL;
-                        case BET:
-                            std::cout << "Amount to bet: ";
-                            std::cin >> b;
-                            this->PLAYERS_HAND[player_index].bet(b);
-                            return BET;
-                        case RAISE:
-                            std::cout << "Amount to raise: ";
-                            std::cin >> b;
-                            this->PLAYERS_HAND[player_index].raise(b);
-                            return RAISE;
-                        case FOLD:
-                            this->PLAYERS_HAND[player_index].fold();
-                            return FOLD;
-                        case ALLIN:
-                            this->PLAYERS_HAND[player_index].allin();
-                            return ALLIN;
-                        case PRINT:
-                            std::cout << *this;
-                            return NO_ACTION;
-                        default:
-                            throw std::runtime_error("\n\tERROR: illegal action detected!\n");
-                            break;
-                    }
-                }
-                catch(...)
-                {
-                    std::cerr << "\n\tERROR: ILLEGAL ACTION PROVIDED" << '\n';
-                    act = true;
-                }
-            }
-            return NO_ACTION;
-        }
-
+        /**
+         * @brief player action manager
+         * 
+         * @param player_index active player index
+         * @return int action taken
+         */
+        int select_action(int player_index);
 
     public:
 
@@ -181,6 +128,13 @@ namespace poker
          * @return false 
          */
         inline void set_new_game() {PLAYERS_HAND.clear(); first_init = true;}
+
+        /**
+         * @brief Get the winner list
+         * 
+         * @return std::vector<player*> pointer to winners players
+         */
+        std::vector<player*> get_winner();
 
         /**
          * @brief print board representation

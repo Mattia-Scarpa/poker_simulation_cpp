@@ -141,6 +141,13 @@ namespace poker
         bool rank_hand() {return Hand.rank_hand();}
 
         /**
+         * @brief Get the player hand rank
+         * 
+         * @return rank structure
+         */
+        rank get_rank() {return Hand.get_rank();}
+
+        /**
          * @brief link the board to the players hand 
          * 
          * @param board pointer to card vector representing board
@@ -269,7 +276,9 @@ namespace poker
          * @brief set the current bet to 0
          * 
          */
-        void reset_current_bet() {current_bet = 0;}
+        void reset_current_bet() {this->current_bet = 0;}
+
+        void pay_win(int win) {this->stack += win;}
 
         /**
          * @brief print sequence of symbolic cards
@@ -284,7 +293,6 @@ namespace poker
             os << "Current bet: " << p.get_current_bet() << "\n";
             return os;
         }
-    };
-        
+    };        
 
 }; // namespace poker

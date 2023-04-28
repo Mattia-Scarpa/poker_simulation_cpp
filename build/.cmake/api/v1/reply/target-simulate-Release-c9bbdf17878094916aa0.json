@@ -67,11 +67,11 @@
 			[
 				{
 					"backtrace" : 4,
-					"path" : "/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/include"
+					"path" : "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/include"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib"
+					"path" : "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib"
 				}
 			],
 			"language" : "CXX",

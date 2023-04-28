@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib
+# Install script for directory: /mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -60,14 +60,14 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "lib::@306ed2d68c6501e8728f",
-					"jsonFile" : "target-lib-Release-eca852c732bceb58a1ee.json",
+					"jsonFile" : "target-lib-Release-4dcc30d433c56de0dfa2.json",
 					"name" : "lib",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "simulate::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-simulate-Release-3e47ce1b64ffbcec7dfa.json",
+					"jsonFile" : "target-simulate-Release-c9bbdf17878094916aa0.json",
 					"name" : "simulate",
 					"projectIndex" : 0
 				}
@@ -77,8 +77,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/build",
-		"source" : "/mnt/Cache/POKER_WS/POKER_SIMULATION_v004"
+		"build" : "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/build",
+		"source" : "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp"
 	},
 	"version" : 
 	{

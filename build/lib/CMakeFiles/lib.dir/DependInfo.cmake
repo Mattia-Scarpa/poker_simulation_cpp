@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/board.cpp" "lib/CMakeFiles/lib.dir/board.cpp.o" "gcc" "lib/CMakeFiles/lib.dir/board.cpp.o.d"
-  "/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/card.cpp" "lib/CMakeFiles/lib.dir/card.cpp.o" "gcc" "lib/CMakeFiles/lib.dir/card.cpp.o.d"
-  "/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/combinations.cpp" "lib/CMakeFiles/lib.dir/combinations.cpp.o" "gcc" "lib/CMakeFiles/lib.dir/combinations.cpp.o.d"
-  "/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/deck.cpp" "lib/CMakeFiles/lib.dir/deck.cpp.o" "gcc" "lib/CMakeFiles/lib.dir/deck.cpp.o.d"
-  "/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/hand.cpp" "lib/CMakeFiles/lib.dir/hand.cpp.o" "gcc" "lib/CMakeFiles/lib.dir/hand.cpp.o.d"
-  "/mnt/Cache/POKER_WS/POKER_SIMULATION_v004/lib/player.cpp" "lib/CMakeFiles/lib.dir/player.cpp.o" "gcc" "lib/CMakeFiles/lib.dir/player.cpp.o.d"
+  "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/board.cpp" "lib/CMakeFiles/lib.dir/board.cpp.o" "gcc" "lib/CMakeFiles/lib.dir/board.cpp.o.d"
+  "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/card.cpp" "lib/CMakeFiles/lib.dir/card.cpp.o" "gcc" "lib/CMakeFiles/lib.dir/card.cpp.o.d"
+  "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/combinations.cpp" "lib/CMakeFiles/lib.dir/combinations.cpp.o" "gcc" "lib/CMakeFiles/lib.dir/combinations.cpp.o.d"
+  "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/deck.cpp" "lib/CMakeFiles/lib.dir/deck.cpp.o" "gcc" "lib/CMakeFiles/lib.dir/deck.cpp.o.d"
+  "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/hand.cpp" "lib/CMakeFiles/lib.dir/hand.cpp.o" "gcc" "lib/CMakeFiles/lib.dir/hand.cpp.o.d"
+  "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/player.cpp" "lib/CMakeFiles/lib.dir/player.cpp.o" "gcc" "lib/CMakeFiles/lib.dir/player.cpp.o.d"
   )
 
 # Targets to which this target links.

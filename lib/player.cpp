@@ -167,15 +167,20 @@ namespace poker
                 std::cerr << "\nWARNING: you are not supposed to equalise rounding bet raising, calling instead...\n";
                 this->call();
             }
+        else if (this->current_bet == *this->rounding_bet)
+            {
+                std::cerr << "\nWARNING: you are not supposed to raise if your current bet is equal to rounding bet, betting instead...\n";
+                this->bet(n);
+            }
         else if (this->current_bet < *this->rounding_bet)
         {
             // otherwise update values
-            this->stack -= n;
             *this->rounding_bet = this->current_bet+n;
-            this->current_bet += n;
             *this->current_pot += n;
+            this->stack -= n;
+            this->current_bet += n;
             // set last action
-            this->last_action = BET;
+            this->last_action = RAISE;
             std::cout << " succes\n";
             return true;
         }
@@ -213,9 +218,9 @@ namespace poker
             return false;
         }        
         std::cout << "Player " << this->ID << ": allin his hand...";
+        *this->current_pot += this->stack;
         this->current_bet += this->stack;
-        this->current_pot += this->stack;
-        if (this->stack >= *this->rounding_bet)
+        if (this->stack > *this->rounding_bet)
             *this->rounding_bet = this->stack; 
         this->stack = 0;
         this->last_action = ALLIN;
