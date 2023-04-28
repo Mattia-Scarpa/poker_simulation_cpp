@@ -168,7 +168,6 @@ namespace poker
         // iterate until all players reach the rounding bet
         while (counter > 0)
         {
-std::cout << "Stack: " << this->PLAYERS_HAND[player_index].get_stack()  << "\n";
             // if the player is not active (after a fold) is not required to take any action
             if (!this->PLAYERS_HAND[player_index].player_active() || this->PLAYERS_HAND[player_index].get_stack() == 0)
             {
@@ -214,7 +213,6 @@ std::cout << "Stack: " << this->PLAYERS_HAND[player_index].get_stack()  << "\n";
         // iterate until all players reach the rounding bet
         while (counter > 0)
         {
-std::cout << "Stack: " << this->PLAYERS_HAND[player_index].get_stack()  << "\n";
             // if the player is not active (after a fold) is not required to take any action
             if (!this->PLAYERS_HAND[player_index].player_active() || this->PLAYERS_HAND[player_index].get_stack() == 0)
             {
@@ -259,7 +257,6 @@ std::cout << "Stack: " << this->PLAYERS_HAND[player_index].get_stack()  << "\n";
         // iterate until all players reach the rounding bet
         while (counter > 0)
         {
-std::cout << "Stack: " << this->PLAYERS_HAND[player_index].get_stack()  << "\n";
             // if the player is not active (after a fold) is not required to take any action
             if (!this->PLAYERS_HAND[player_index].player_active() || this->PLAYERS_HAND[player_index].get_stack() == 0)
             {
@@ -304,7 +301,6 @@ std::cout << "Stack: " << this->PLAYERS_HAND[player_index].get_stack()  << "\n";
         // iterate until all players reach the rounding bet
         while (counter > 0)
         {
-std::cout << "Stack: " << this->PLAYERS_HAND[player_index].get_stack()  << "\n";
             // if the player is not active (after a fold) is not required to take any action
             if (!this->PLAYERS_HAND[player_index].player_active() || this->PLAYERS_HAND[player_index].get_stack() == 0)
             {
