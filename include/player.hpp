@@ -30,25 +30,25 @@ namespace poker
          * @brief default player chips stack
          * 
          */
-        int stack = 10000;
+        float stack = 10000;
         
         /**
          * @brief rounding bet value, to keep playing rounding bet value must be at least equalized
          * 
          */
-        int* rounding_bet = nullptr;
+        float* rounding_bet = nullptr;
 
         /**
          * @brief pointer to phase pot
          * 
          */
-        int* current_pot = nullptr;
+        float* current_pot = nullptr;
 
         /**
          * @brief value to keep the last action taken by the player
          * 
          */
-        int last_action = -1;
+        int last_action = NO_ACTION;
 
         /**
          * @brief player status, a true value means an actve 
@@ -72,7 +72,7 @@ namespace poker
          * @brief value for a specific phase bet used to compare with the rounding_bet 
          * 
          */
-        int current_bet = 0;
+        float current_bet = 0;
 
         /***************************************************************************************
          ***************************************************************************************
@@ -88,7 +88,7 @@ namespace poker
          * @param r pointer to rounding bet value
          * @param p pointer to current phase board pot
          */
-        player(card c1, card c2, int* r, int* p = nullptr);
+        player(card c1, card c2, float* r, float* p = nullptr);
         
         /**
          * @brief Construct a new player object
@@ -97,7 +97,7 @@ namespace poker
          * @param r pointer to rounding bet value
          * @param p pointer to current phase board pot
          */
-        player(hand h, int* r, int* p = nullptr);
+        player(hand h, float* r, float* p = nullptr);
 
         /**
          * @brief Remove default constructor
@@ -126,11 +126,32 @@ namespace poker
         inline void set_blind_index(int idx) {blind_index = idx;}
 
         /**
+         * @brief Get the blind combination index list
+         * 
+         * @return int index of combination in list
+         */
+        inline int get_blind_index() {return this->blind_index;}
+
+        /**
          * @brief Set the flop list index
          * 
          * @param idx index
          */
         inline void set_flop_index(int idx) {flop_index = idx;}
+
+        /**
+         * @brief Get the fold combination index list
+         * 
+         * @return int index of combination in list
+         */
+        inline int get_flop_index() {return this->flop_index;}
+
+        /**
+         * @brief Get the player last action
+         * 
+         * @return int last action index
+         */
+        inline int get_last_action() {return this->last_action;}
         
         /**
          * @brief rank hand resorting to hand dedicated function
@@ -270,15 +291,22 @@ namespace poker
          * 
          * @return int bet value
          */
-        int get_current_bet() {return this->current_bet;}
+        inline float get_current_bet() {return this->current_bet;}
 
         /**
          * @brief set the current bet to 0
          * 
          */
-        void reset_current_bet() {this->current_bet = 0;}
+        inline void reset_current_bet() {this->current_bet = 0;}
 
-        void pay_win(int win) {this->stack += win;}
+        /**
+         * @brief increase stack
+         * 
+         * @param win amount to increase stack
+         */
+        inline void pay_win(float win) {this->stack += win;}
+
+        inline float get_stack() {return this->stack;}
 
         /**
          * @brief print sequence of symbolic cards

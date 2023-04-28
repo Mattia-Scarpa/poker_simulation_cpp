@@ -10,9 +10,9 @@
 
 namespace poker
 {
-    player::player(card c1, card c2, int* r, int* p) : Hand(c1, c2), rounding_bet{r}, current_pot{p} {}
+    player::player(card c1, card c2, float* r, float* p) : Hand(c1, c2), rounding_bet{r}, current_pot{p} {}
 
-    player::player(hand h, int* r, int* p) : Hand{h}, rounding_bet{r}, current_pot{p} {}
+    player::player(hand h, float* r, float* p) : Hand{h}, rounding_bet{r}, current_pot{p} {}
 
     player::~player() {}
 

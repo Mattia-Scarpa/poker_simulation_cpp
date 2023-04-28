@@ -40,24 +40,23 @@ namespace poker
         {
             this->PLAYERS_HAND.clear();
         // draw a new hand for each player
-            for (size_t i = 0; i < NUM_PLAYER; i++)
+            for (size_t player_index = 0; player_index < NUM_PLAYER; player_index++)
             {
                 PLAYERS_HAND.push_back(player(DECK.draw_hand(), &this->rounding_bet, &this->CURRENT_POT));
-                PLAYERS_HAND[i].set_board(&this->BOARD);
+                if (flag_save)
+                    PLAYERS_HAND[player_index].set_blind_index(COMBS.find_combinations(PLAYERS_HAND[player_index].get_sorted_position()));
+                PLAYERS_HAND[player_index].set_board(&this->BOARD);
             }
             this->first_init = false;
         }
         else
         {
             // draw a new hand for each player
-            for (size_t i = 0; i < NUM_PLAYER; i++)
+            for (size_t player_index = 0; player_index < NUM_PLAYER; player_index++)
             {
-                PLAYERS_HAND[i].new_hand(DECK.draw_hand());
+                PLAYERS_HAND[player_index].new_hand(DECK.draw_hand());
             }
         }
-        if (flag_save)
-            for (auto player:PLAYERS_HAND)
-                player.set_blind_index(COMBS.find_combinations(player.get_sorted_position()));
     }
 
     bool board::draw_board()
@@ -79,16 +78,15 @@ namespace poker
         // providing board to each hand
         if (!this->PLAYERS_HAND.empty() & !this->PLAYERS_HAND[0].board_valid()) 
         {
-            for (auto player:this->PLAYERS_HAND)
+            for (auto &player:this->PLAYERS_HAND)
                 player.set_board(&this->BOARD);
         }
         // increment turn counter
         this->PHASE++;
 
-        if (flag_save && this->PHASE==BLIND)
-            for (auto player:PLAYERS_HAND)
-                player.set_blind_index(COMBS.find_combinations(player.get_sorted_position()));
-
+        if (flag_save && this->PHASE==FLOP)
+            for (auto &player:PLAYERS_HAND)
+                player.set_flop_index(COMBS.find_combinations(player.get_sorted_position()));
 
         return true;
     }
@@ -170,8 +168,9 @@ namespace poker
         // iterate until all players reach the rounding bet
         while (counter > 0)
         {
+std::cout << "Stack: " << this->PLAYERS_HAND[player_index].get_stack()  << "\n";
             // if the player is not active (after a fold) is not required to take any action
-            if (!this->PLAYERS_HAND[player_index].player_active())
+            if (!this->PLAYERS_HAND[player_index].player_active() || this->PLAYERS_HAND[player_index].get_stack() == 0)
             {
                 counter--;
                 player_index = (player_index+1)%this->NUM_PLAYER;
@@ -181,7 +180,7 @@ namespace poker
                 // take action
                 int action = this->select_action(player_index);
                 // evaluate if rounding bet is increased
-                if (action == BET || action == RAISE)
+                if (action == BET || action == RAISE || action == ALLIN)
                 {
                     counter = this->NUM_PLAYER-1;
                     player_index = (player_index+1)%this->NUM_PLAYER;
@@ -197,9 +196,14 @@ namespace poker
         this->TOTAL_POT += this->CURRENT_POT;
         this->CURRENT_POT = 0;          // reset phase pot before drwing new board cards
         this->rounding_bet = 0;         // reset rounding bet for a new phase
+
         // resetting player current hand
         for (auto &player:PLAYERS_HAND)
             player.reset_current_bet();
+        
+        // if raise or bet UTG is the first on the last raise left
+        if (PLAYERS_HAND[player_index].get_last_action() == BET || PLAYERS_HAND[player_index].get_last_action() == RAISE)
+            player_index = (player_index+1)%this->NUM_PLAYER;
 
         std::cout << "--- DRAWING FLOP ---\n";        
         this->draw_board();    
@@ -210,8 +214,9 @@ namespace poker
         // iterate until all players reach the rounding bet
         while (counter > 0)
         {
+std::cout << "Stack: " << this->PLAYERS_HAND[player_index].get_stack()  << "\n";
             // if the player is not active (after a fold) is not required to take any action
-            if (!this->PLAYERS_HAND[player_index].player_active())
+            if (!this->PLAYERS_HAND[player_index].player_active() || this->PLAYERS_HAND[player_index].get_stack() == 0)
             {
                 counter--;
                 player_index = (player_index+1)%this->NUM_PLAYER;
@@ -221,7 +226,7 @@ namespace poker
                 // take action
                 int action = this->select_action(player_index);
                 // evaluate if rounding bet is increased
-                if (action == BET || action == RAISE)
+                if (action == BET || action == RAISE || action == ALLIN)
                 {
                     counter = this->NUM_PLAYER-1;
                     player_index = (player_index+1)%this->NUM_PLAYER;
@@ -240,6 +245,10 @@ namespace poker
         // resetting player current hand
         for (auto &player:PLAYERS_HAND)
             player.reset_current_bet();
+        
+        // if raise or bet UTG is the first on the last raise left
+        if (PLAYERS_HAND[player_index].get_last_action() == BET || PLAYERS_HAND[player_index].get_last_action() == RAISE)
+            player_index = (player_index+1)%this->NUM_PLAYER;
 
         std::cout << "--- DRAWING TURN ---\n";        
         this->draw_board();    
@@ -250,8 +259,9 @@ namespace poker
         // iterate until all players reach the rounding bet
         while (counter > 0)
         {
+std::cout << "Stack: " << this->PLAYERS_HAND[player_index].get_stack()  << "\n";
             // if the player is not active (after a fold) is not required to take any action
-            if (!this->PLAYERS_HAND[player_index].player_active())
+            if (!this->PLAYERS_HAND[player_index].player_active() || this->PLAYERS_HAND[player_index].get_stack() == 0)
             {
                 counter--;
                 player_index = (player_index+1)%this->NUM_PLAYER;
@@ -261,7 +271,7 @@ namespace poker
                 // take action
                 int action = this->select_action(player_index);
                 // evaluate if rounding bet is increased
-                if (action == BET || action == RAISE)
+                if (action == BET || action == RAISE || action == ALLIN)
                 {
                     counter = this->NUM_PLAYER-1;
                     player_index = (player_index+1)%this->NUM_PLAYER;
@@ -280,6 +290,10 @@ namespace poker
         // resetting player current hand
         for (auto &player:PLAYERS_HAND)
             player.reset_current_bet();
+        
+        // if raise or bet UTG is the first on the last raise left
+        if (PLAYERS_HAND[player_index].get_last_action() == BET || PLAYERS_HAND[player_index].get_last_action() == RAISE)
+            player_index = (player_index+1)%this->NUM_PLAYER;
 
         std::cout << "--- DRAWING RIVER ---\n";        
         this->draw_board();    
@@ -290,8 +304,9 @@ namespace poker
         // iterate until all players reach the rounding bet
         while (counter > 0)
         {
+std::cout << "Stack: " << this->PLAYERS_HAND[player_index].get_stack()  << "\n";
             // if the player is not active (after a fold) is not required to take any action
-            if (!this->PLAYERS_HAND[player_index].player_active())
+            if (!this->PLAYERS_HAND[player_index].player_active() || this->PLAYERS_HAND[player_index].get_stack() == 0)
             {
                 counter--;
                 player_index = (player_index+1)%this->NUM_PLAYER;
@@ -301,7 +316,7 @@ namespace poker
                 // take action
                 int action = this->select_action(player_index);
                 // evaluate if rounding bet is increased
-                if (action == BET || action == RAISE)
+                if (action == BET || action == RAISE || action == ALLIN)
                 {
                     counter = this->NUM_PLAYER-1;
                     player_index = (player_index+1)%this->NUM_PLAYER;
@@ -330,9 +345,10 @@ namespace poker
         std::cout << "A total of " << winners.size() << " winners found!\n";
 
         for (auto player:winners)
-            player->pay_win(this->TOTAL_POT/winners.size());
-
+            player->pay_win(this->TOTAL_POT/static_cast<float>(winners.size()));
         
+        this->TOTAL_POT=0;
+
         std::cout << *this;
 
         return true;

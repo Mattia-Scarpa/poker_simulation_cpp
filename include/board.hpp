@@ -34,15 +34,20 @@ namespace poker
          * @brief game board pot
          * 
          */
-        int TOTAL_POT{0};
-        int CURRENT_POT{0};
+        float TOTAL_POT{0};
+        float CURRENT_POT{0};
 
         /**
          * @brief offset to determine the first player acting
          * 
          */
         int position_offset{0};
-        int rounding_bet{0};
+
+        /**
+         * @brief highest reference bet, all active player must equalise this bet
+         * 
+         */
+        float rounding_bet{0};
 
         /**
          * @brief board deck cards 
@@ -154,7 +159,7 @@ namespace poker
                 if (player.player_active())
                 {
                     std::cout << player;
-                    std:: cout << "\n---------------------\n";
+                    std:: cout << "---------------------\n\n";
                 }
             }
             return os;
