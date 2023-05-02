@@ -1,3 +1,14 @@
+/**
+ * @file board.hpp
+ * @author Mattia Scarpa (sct.mtt.25@gmail.com)
+ * @brief Board class structure function & member declaration
+ * @version 0.1
+ * @date 2023-05-03
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 # pragma once
 
 #include "../include/combinations.hpp"

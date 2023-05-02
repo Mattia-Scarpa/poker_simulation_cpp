@@ -1,13 +1,14 @@
 /**
  * @file deck.cpp
- * @author your name (you@domain.com)
- * @brief 
+ * @author Mattia Scarpa (sct.mtt.25@gmail.com)
+ * @brief implementation defining deck class functions 
  * @version 0.1
- * @date 2023-04-08
+ * @date 2023-05-03
  * 
  * @copyright Copyright (c) 2023
  * 
  */
+
 
 #include <iostream>
 #include <memory>
@@ -17,7 +18,6 @@
 #include <math.h>
 
 #include "../include/utilities.hpp"
-
 #include "../include/deck.hpp"
 
 namespace poker

@@ -1,7 +1,7 @@
 /**
  * @file hand.hpp
- * @author your name (you@domain.com)
- * @brief 
+ * @author Mattia Scarpa (sct.mtt.25@gmail.com)
+ * @brief Hand class structure function & member declaration
  * @version 0.1
  * @date 2023-04-08
  * 

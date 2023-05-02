@@ -1,7 +1,7 @@
 /**
  * @file utilities.hpp
- * @author Mattia Scarpa
- * @brief 
+ * @author Mattia Scarpa (sct.mtt.25@gmail.com)
+ * @brief utilities header with implemented function
  * @version 0.4
  * @date 2023-04-08
  * 

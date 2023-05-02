@@ -1,3 +1,13 @@
+/**
+ * @file combinations.hpp
+ * @author Mattia Scarpa (sct.mtt.25@gmail.com)
+ * @brief class to save hands combination statistics
+ * @version 0.1
+ * @date 2023-05-03
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
 
 #pragma once
 

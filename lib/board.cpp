@@ -1,3 +1,13 @@
+/**
+ * @file board.cpp
+ * @author Mattia Scarpa (sct.mtt.25@gmail.com)
+ * @brief implementation defining board class functions 
+ * @version 0.1
+ * @date 2023-05-03
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
 
 #include <iostream>
 #include <vector>

@@ -1,9 +1,9 @@
 /**
  * @file card.cpp
- * @author your name (you@domain.com)
- * @brief 
+ * @author Mattia Scarpa (sct.mtt.25@gmail.com)
+ * @brief implementation defining card class functions 
  * @version 0.1
- * @date 2023-04-04
+ * @date 2023-03-30
  * 
  * @copyright Copyright (c) 2023
  * 
