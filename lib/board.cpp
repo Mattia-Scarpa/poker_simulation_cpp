@@ -42,7 +42,7 @@ namespace poker
         // draw a new hand for each player
             for (size_t player_index = 0; player_index < NUM_PLAYER; player_index++)
             {
-                PLAYERS_HAND.push_back(player(DECK.draw_hand(), &this->rounding_bet, &this->CURRENT_POT));
+                PLAYERS_HAND.push_back(player(DECK.draw_hand(), BB, &this->rounding_bet, &this->CURRENT_POT));
                 if (flag_save)
                     PLAYERS_HAND[player_index].set_blind_index(COMBS.find_combinations(PLAYERS_HAND[player_index].get_sorted_position()));
                 PLAYERS_HAND[player_index].set_board(&this->BOARD);
@@ -157,8 +157,8 @@ namespace poker
         std::cout << "-------------- BLIND --------------\n";
 
         // ensuring valid player position
-        this->PLAYERS_HAND[(this->position_offset)%this->NUM_PLAYER].bet(SB);
-        this->PLAYERS_HAND[(this->position_offset+1)%this->NUM_PLAYER].raise(BB);
+        this->PLAYERS_HAND[(this->position_offset)%this->NUM_PLAYER].bet(SB, true);
+        this->PLAYERS_HAND[(this->position_offset+1)%this->NUM_PLAYER].raise(BB, true);
 
         // selecting utg player
         int player_index = (this->position_offset+2)%this->NUM_PLAYER;

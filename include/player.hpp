@@ -27,10 +27,33 @@ namespace poker
         hand Hand;
 
         /**
+         * @brief 
+         * 
+         */
+        int BB = 100;
+
+        /**
          * @brief default player chips stack
          * 
          */
         float stack = 10000;
+        
+        /**
+         * @brief last bet value, 0 only for CHECK & FOLD
+         * 
+         */
+        float last_bet = 0;
+
+        /**
+         * @brief WARNING flag, true if non fatal error occur on bet size
+         * 
+         */
+        bool FLAG_BET_WARNING = false;
+        /**
+         * @brief ERROR flag, true if fatal error occur
+         * 
+         */
+        bool FLAG_ERROR = false;
         
         /**
          * @brief rounding bet value, to keep playing rounding bet value must be at least equalized
@@ -88,7 +111,7 @@ namespace poker
          * @param r pointer to rounding bet value
          * @param p pointer to current phase board pot
          */
-        player(card c1, card c2, float* r, float* p = nullptr);
+        player(card c1, card c2, int bb, float* r, float* p = nullptr);
         
         /**
          * @brief Construct a new player object
@@ -97,7 +120,7 @@ namespace poker
          * @param r pointer to rounding bet value
          * @param p pointer to current phase board pot
          */
-        player(hand h, float* r, float* p = nullptr);
+        player(hand h, int bb, float* r, float* p = nullptr);
 
         /**
          * @brief Remove default constructor
@@ -260,7 +283,7 @@ namespace poker
          * @return true if procedure succeed
          * @return false otherwise
          */
-        bool raise(int n);
+        bool raise(int n, bool is_preflop = false);
 
         /**
          * @brief take fold action
@@ -297,7 +320,10 @@ namespace poker
          * @brief set the current bet to 0
          * 
          */
-        inline void reset_current_bet() {this->current_bet = 0;}
+        inline void reset_current_bet() {this->current_bet = 0;
+                                         this->FLAG_BET_WARNING = false;
+                                         this->FLAG_ERROR = false;
+                                        }
 
         /**
          * @brief increase stack

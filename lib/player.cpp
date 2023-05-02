@@ -10,9 +10,9 @@
 
 namespace poker
 {
-    player::player(card c1, card c2, float* r, float* p) : Hand(c1, c2), rounding_bet{r}, current_pot{p} {}
+    player::player(card c1, card c2, int bb, float* r, float* p) : Hand(c1, c2), BB{bb}, rounding_bet{r}, current_pot{p} {}
 
-    player::player(hand h, float* r, float* p) : Hand{h}, rounding_bet{r}, current_pot{p} {}
+    player::player(hand h, int bb, float* r, float* p) : Hand{h}, BB{bb}, rounding_bet{r}, current_pot{p} {}
 
     player::~player() {}
 
@@ -31,6 +31,7 @@ namespace poker
         {
             // set last action
             this->last_action = CHECK;
+            this->last_bet = 0;
             std::cout << " succes!\n";
             return true;
         }
@@ -38,6 +39,7 @@ namespace poker
         else if (this->current_bet < *this->rounding_bet)
         {
             std::cerr << "ERROR: you are not allowed to check if rounding bet is higher than your current bet!\n";
+            this->FLAG_ERROR = true;
             throw std::runtime_error("ERROR: you are not allowed to check if rounding bet is higher than your current bet!\n");
         }
         std::cerr << "WARNING: checking with an higher bet than the rounding bet should not happens!\n";
@@ -52,7 +54,7 @@ namespace poker
             std::cerr << "WARNING: player is not active\n";
             this->last_action = NO_ACTION;
             return false;
-        }        
+        }
         std::cout << "Player " << this->ID << ": call the bet...";
         // evaluate feasibility of the action
         if (this->current_bet < *this->rounding_bet)
@@ -68,6 +70,7 @@ namespace poker
                 std::cerr << "\nWARNING: no link to the pot provided, it must be managed from your board object!\n";
             // set last action
             this->last_action = CALL;
+            this->last_bet = call_val;
             std::cout << " succes!\n";
             return true;
         }
@@ -82,6 +85,7 @@ namespace poker
         if (this->current_bet > *this->rounding_bet)
         {
             std::cerr << "ERROR: you should not call if your current bet is higher than rounding bet!\n";
+            this->FLAG_ERROR = true;
             throw std::runtime_error("ERROR: you should not call if your current bet is higher than rounding bet!\n");
         }
         return false;        
@@ -95,7 +99,14 @@ namespace poker
             std::cerr << "WARNING: player is not active\n";
             this->last_action = NO_ACTION;
             return false;
-        }        
+        }
+        if (n < this->BB && !is_preflop)
+        {
+            std::cerr << "WARNING: you can not bet less than chosen BigBlind!\n";
+            n = this->BB;
+            this->FLAG_BET_WARNING = true;
+        }
+        
         std::cout << "Player " << this->ID << ": bet " << n << "...";
         // evaluate board situation if bet is allowed
         if (this->stack == 0)
@@ -114,8 +125,7 @@ namespace poker
             std::cerr << "\nWARNING: you can not bet more than your maximum stack, allin instead!\n";
             if (!is_preflop)
                 return this->allin();
-            this->allin();
-            this->last_action = PREFLOP;
+            return this->allin();
         }
         else if (this->current_bet == *this->rounding_bet)
         {   
@@ -126,15 +136,19 @@ namespace poker
             *this->rounding_bet += n;
             // set last action
             this->last_action = BET;
+            this->last_bet = n;
             std::cout << " succes\n";
             return true;
         }
         else
+        {
+            this->FLAG_ERROR = true;
             throw std::runtime_error("ERROR: an undefined error occurred...\n");
+        }
         return false;
     }
 
-    bool player::raise(int n)
+    bool player::raise(int n, bool is_preflop)
     {
         // check if player is active
         if (!this->is_active)
@@ -142,7 +156,13 @@ namespace poker
             std::cerr << "WARNING: player is not active\n";
             this->last_action = NO_ACTION;
             return false;
-        }                
+        }
+        if (n-*this->rounding_bet < this->BB && !is_preflop)
+        {
+            std::cerr << "WARNING: you can not raise less than BigBlind over the current rounding bet!\n";
+            n = (this->BB + *this->rounding_bet) - this->current_bet;
+            this->FLAG_BET_WARNING = true;
+        }     
         std::cout << "Player " << this->ID << ": raise " << n << "...";
         // evaluate board situation if bet is allowed
         if (this->stack == 0)
@@ -151,15 +171,10 @@ namespace poker
             this->last_action = NO_ACTION;
             return false;
         }
-        /*
-        if (this->current_bet == *this->rounding_bet)
-        {
-            std::cerr << "\nWARNING: you are not allowed to raise if you are equalising rounding bet... calling instead...\n";
-            return this->call();
-        }*/
         if ((this->current_bet+n) < *this->rounding_bet)
             {
                 std::cerr << "\nERROR: you are not raising enough!\n";
+                this->FLAG_ERROR = true;
                 throw std::runtime_error("\nERROR: you are not raising enough!\n");
             }
         else if ((this->current_bet+n) == *this->rounding_bet)
@@ -180,6 +195,7 @@ namespace poker
             this->stack -= n;
             this->current_bet += n;
             // set last action
+            this->last_bet = n;
             this->last_action = RAISE;
             std::cout << " succes\n";
             return true;
@@ -203,6 +219,7 @@ namespace poker
             return this->check();
         }
         this->is_active = false;
+        this->last_bet = 0;
         this->last_action = FOLD;
         std::cout << " success!\n";
         return true;
@@ -222,8 +239,9 @@ namespace poker
         this->current_bet += this->stack;
         if (this->stack > *this->rounding_bet)
             *this->rounding_bet = this->stack; 
-        this->stack = 0;
+        this->last_bet = this->stack;
         this->last_action = ALLIN;
+        this->stack = 0;
         std::cout << " succes!\n";      
         return true;  
     }

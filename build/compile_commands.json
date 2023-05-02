@@ -1,0 +1,37 @@
+[
+{
+  "directory": "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/build",
+  "command": "/usr/bin/g++ -I/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/include -I/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib -g -fopenmp -o CMakeFiles/simulate.dir/src/main_game.cpp.o -c /mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/src/main_game.cpp",
+  "file": "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/src/main_game.cpp"
+},
+{
+  "directory": "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/build",
+  "command": "/usr/bin/g++ -I/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/include -I/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib -g -o lib/CMakeFiles/lib.dir/player.cpp.o -c /mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/player.cpp",
+  "file": "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/player.cpp"
+},
+{
+  "directory": "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/build",
+  "command": "/usr/bin/g++ -I/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/include -I/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib -g -o lib/CMakeFiles/lib.dir/board.cpp.o -c /mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/board.cpp",
+  "file": "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/board.cpp"
+},
+{
+  "directory": "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/build",
+  "command": "/usr/bin/g++ -I/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/include -I/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib -g -o lib/CMakeFiles/lib.dir/deck.cpp.o -c /mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/deck.cpp",
+  "file": "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/deck.cpp"
+},
+{
+  "directory": "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/build",
+  "command": "/usr/bin/g++ -I/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/include -I/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib -g -o lib/CMakeFiles/lib.dir/hand.cpp.o -c /mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/hand.cpp",
+  "file": "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/hand.cpp"
+},
+{
+  "directory": "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/build",
+  "command": "/usr/bin/g++ -I/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/include -I/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib -g -o lib/CMakeFiles/lib.dir/combinations.cpp.o -c /mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/combinations.cpp",
+  "file": "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/combinations.cpp"
+},
+{
+  "directory": "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/build",
+  "command": "/usr/bin/g++ -I/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/include -I/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib -g -o lib/CMakeFiles/lib.dir/card.cpp.o -c /mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/card.cpp",
+  "file": "/mnt/Cache/POKER_WS/POKER_SIMULATIONV_005/poker_simulation_cpp/lib/card.cpp"
+}
+]
