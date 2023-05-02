@@ -3,14 +3,7 @@
 #include <vector>
 #include <algorithm>
 
-#include "../include/combinations.hpp"
-#include "../include/card.hpp"
-#include "../include/deck.hpp"
-#include "../include/hand.hpp"
-#include "../include/player.hpp"
 #include "../include/board.hpp"
-
-
 
 namespace poker
 {
@@ -346,6 +339,10 @@ namespace poker
         this->TOTAL_POT=0;
 
         std::cout << *this;
+
+        // update winners lists and save
+        this->COMBS.update_winners(PLAYERS_HAND, winners);
+        this->COMBS.save_combinations();
 
         return true;
     }

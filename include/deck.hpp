@@ -1,4 +1,6 @@
 #pragma once
+
+#include "../include/card.hpp"
 #include "../include/hand.hpp"
 
 namespace poker

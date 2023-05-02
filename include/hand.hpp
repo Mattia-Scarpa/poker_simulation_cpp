@@ -14,6 +14,8 @@
 #include <iterator>
 #include <algorithm>
 
+#include "../include/card.hpp"
+
 namespace poker
 {
     /**

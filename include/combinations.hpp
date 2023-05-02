@@ -1,6 +1,8 @@
 
 #pragma once
 
+#include "../include/player.hpp"
+
 constexpr int COMBS_2CARD{1326};                // Total of 2 cards combination
 constexpr int COMBS_5CARD{2598960};             // Total of 5 cards combination
 
@@ -94,31 +96,31 @@ public:
     bool save_combinations();
 
     /**
-     * @brief insert win/lose list according to index found
+     * @brief update win/lose list according to index found
      * 
-     * @param hands_index index in combinations lists for each hands
-     * @param winners_index index from hands_index that are winning hands
-     * @param blind parameters that is true if blind list
+     * @param players list of player
+     * @param winners list of winning player
      */
-    inline void update_winners(std::vector<int> hands_index, std::vector<int> winners_index, int blind = true) 
+    inline void update_winners(const std::vector<poker::player> &players, const std::vector<poker::player*> &winners) 
     {
-        for (int hands_idx : hands_index) {
-            if (blind)
-                oddsResultBlind[hands_idx][1]++;          // Increase the hand count by one
-            else
-                oddsResultFlop[hands_idx][1]++;
+        for (auto Player:players)
+        {
+            if(Player.player_active())
+            {
+                oddsResultBlind[Player.get_blind_index()][1]++;
+                oddsResultFlop[Player.get_flop_index()][1]++;
+            }
         }
-        
         // Incrementing the winner combination in the games
         // If more than one player won on the same simulation the weight will be lower according to the winners count
-        for (int winners_idx : winners_index) {
-            if (blind)
-                oddsResultBlind[hands_index[winners_idx]][0]++;
-            else
-                oddsResultFlop[hands_index[winners_idx]][0]++;
-
-            //std::cout << "Writing at: " << hands_index[winners_idx] << "\n";     
-            }   
+        for (auto Player:winners)
+        {
+            if(Player->player_active())
+            {
+                oddsResultBlind[Player->get_blind_index()][0]++;
+                oddsResultFlop[Player->get_flop_index()][0]++;
+            }
+        }
     }
 
 };

@@ -1,10 +1,10 @@
 # ninja log v5
-1	493	1682942152331342800	lib/CMakeFiles/lib.dir/deck.cpp.o	a7087061e16fc45e
-1	639	1682942152476567200	lib/CMakeFiles/lib.dir/board.cpp.o	7d7b762646caf0c1
-1	658	1682942152495768100	lib/CMakeFiles/lib.dir/hand.cpp.o	a0fa13dc01a0e24
-1	461	1682942152299449700	CMakeFiles/simulate.dir/src/main_game.cpp.o	c3e33da3ba57d015
+1	485	1683067056374831200	lib/CMakeFiles/lib.dir/deck.cpp.o	a7087061e16fc45e
+2	604	1683067077252949800	lib/CMakeFiles/lib.dir/board.cpp.o	7d7b762646caf0c1
+2	613	1683067056502491400	lib/CMakeFiles/lib.dir/hand.cpp.o	a0fa13dc01a0e24
+1	438	1683067077087951800	CMakeFiles/simulate.dir/src/main_game.cpp.o	c3e33da3ba57d015
 1	214	1682942152052874700	lib/CMakeFiles/lib.dir/card.cpp.o	3edac2ddd17e7d39
-658	799	1682942152635987200	lib/liblib.a	95a9985e135d448
-799	898	1682942152736001900	simulate	84b4302db6180b90
-1	573	1682942152411560200	lib/CMakeFiles/lib.dir/combinations.cpp.o	41d4845fc12dd451
-1	409	1682942152247357700	lib/CMakeFiles/lib.dir/player.cpp.o	98fb4d9e626f4c36
+604	745	1683067077392903000	lib/liblib.a	95a9985e135d448
+745	838	1683067077485954300	simulate	84b4302db6180b90
+2	583	1683067077232256900	lib/CMakeFiles/lib.dir/combinations.cpp.o	41d4845fc12dd451
+1	383	1683067077032348800	lib/CMakeFiles/lib.dir/player.cpp.o	98fb4d9e626f4c36

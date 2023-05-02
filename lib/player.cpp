@@ -3,9 +3,6 @@
 #include <vector>
 #include <stdexcept>
 
-
-#include "../include/card.hpp"
-#include "../include/hand.hpp"
 #include "../include/player.hpp"
 
 namespace poker

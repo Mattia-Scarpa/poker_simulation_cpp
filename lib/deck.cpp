@@ -16,8 +16,6 @@
 #include <vector>
 #include <math.h>
 
-#include "../include/card.hpp"
-#include "../include/hand.hpp"
 #include "../include/utilities.hpp"
 
 #include "../include/deck.hpp"

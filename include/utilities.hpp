@@ -13,7 +13,7 @@
 
 #include <vector>
 
-namespace utility
+namespace utility 
 {    
     /**
          * @brief remove a vector element at a given index

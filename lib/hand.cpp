@@ -7,7 +7,6 @@
 #include <math.h>
 
 #include "../include/utilities.hpp"
-#include "../include/card.hpp"
 
 #include "../include/hand.hpp"
 

@@ -2,6 +2,9 @@
 
 #include <chrono>
 
+#include "../include/card.hpp"
+#include "../include/hand.hpp"
+
 namespace poker
 {
 
@@ -74,7 +77,7 @@ namespace poker
         int last_action = NO_ACTION;
 
         /**
-         * @brief player status, a true value means an actve 
+         * @brief player status, a true value means an active player
          * 
          */
         bool is_active = true;

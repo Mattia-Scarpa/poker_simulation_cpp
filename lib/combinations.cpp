@@ -8,7 +8,6 @@
 #include <algorithm>
 #include <vector>
 
-#include "../include/card.hpp"
 #include "../include/combinations.hpp"
 
 
