@@ -343,17 +343,40 @@ namespace poker
     
         std::cout << "A total of " << winners.size() << " winners found!\n";
 
-        for (auto player:winners)
+        for (auto &player:winners)
             player->pay_win(this->TOTAL_POT/static_cast<float>(winners.size()));
         
         this->TOTAL_POT=0;
-
         std::cout << *this;
-
         // update winners lists and save
         this->COMBS.update_winners(PLAYERS_HAND, winners);
-        this->COMBS.save_combinations();
+        return true;
+    }
 
+    bool board::run_board_simulation(int total_run)
+    {
+        
+        this->init();
+        std::cout << "--- DRAWING FLOP ---\n";        
+        this->draw_board();    
+
+        std::cout << "--- DRAWING TURN ---\n";        
+        this->draw_board();    
+
+        std::cout << "--- DRAWING RIVER ---\n";        
+        this->draw_board();    
+
+        std::cout << "---- HAND EVALUATION ----\n";
+        for (auto &player:this->PLAYERS_HAND)
+            player.rank_hand();
+
+        std::vector<player*> winners = this->get_winner();
+    
+        std::cout << "A total of " << winners.size() << " winners found!\n";
+
+        std::cout << *this;
+        // update winners lists and save
+        this->COMBS.update_winners(PLAYERS_HAND, winners);
         return true;
     }
 
