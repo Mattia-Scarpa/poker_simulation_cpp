@@ -142,13 +142,15 @@ namespace poker
          */
         bool play_turn();
 
+        bool run_board_simulation(int total_run);
+
         /**
          * @brief set the board to begin a new game with new players
          * 
          * @return true 
          * @return false 
          */
-        inline void set_new_game() {PLAYERS_HAND.clear(); first_init = true;}
+        inline void set_new_game() {this->PLAYERS_HAND.clear(); this->first_init = true;}
 
         /**
          * @brief Get the winner list
@@ -156,6 +158,8 @@ namespace poker
          * @return std::vector<player*> pointer to winners players
          */
         std::vector<player*> get_winner();
+
+        inline void save_statistics() {this->COMBS.save_combinations();}
 
         /**
          * @brief print board representation
