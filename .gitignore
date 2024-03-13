@@ -1,3 +1,4 @@
 saves/result_*
 saves_backup/result_*
 .vscode/
+build/
